@@ -35,7 +35,7 @@
             android:title="Favorite" />
     </group>
 
-    <item android:title="">
+    <item android:title="Parameters">
         <menu>
             <item
                 android:id="@+id/setting"
@@ -46,12 +46,10 @@
         </menu>
     </item>
 
-    <item android:title="">
-        <menu>
-            <item
-                android:id="@+id/mode_dark"
-                android:icon="@drawable/ic_brightness"
-                android:title="Dark Mode" />
-        </menu>
-    </item>
+    <group android:orderInCategory="100">
+        <item
+            android:id="@+id/mode_dark"
+            android:icon="@drawable/ic_brightness"
+            android:title="Dark Mode" />
+    </group>
 </menu>
