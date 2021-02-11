@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"/>
+
+        <item android:id="@+id/nav_favorite"
+            android:icon="@drawable/ic_baseline_favorite_border_24"
+            android:title="Favorite"/>
+
+        <item android:id="@+id/nav_massage"
+            android:icon="@drawable/ic_baseline_mail_outline_24"
+            android:title="Message"/>
+
+        <item android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person"
+            android:title="Profile"/>
+
+        <item android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_baseline_notifications_none_24"
+            android:title="Notification"/>
+
+        <item android:id="@+id/nav_share"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:title="Favorite"/>
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item android:id="@+id/setting"
+                android:title="Settings and Confidentiality"/>
+            <item android:id="@+id/ass_center"
+                android:title="Assistance Center"/>
+        </menu>
+    </item>
+
+    <item android:title="">
+        <menu>
+            <item android:id="@+id/mode_dark"
+                android:icon="@drawable/ic_brightness"
+                android:title="Dark Mode"/>
+        </menu>
+    </item>
+</menu>
