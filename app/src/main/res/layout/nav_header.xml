@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
-            android:text="upakobuz@gmail.com" />
+            android:text="upakobuzz@gmail.com" />
     </LinearLayout>
 
 </LinearLayout>

@@ -50,6 +50,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new HomeFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_home);
+        }
     }
 
     @Override
@@ -80,7 +86,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ShareFragment()).commit();
                 break;
+            case R.id.setting:
+                Toast.makeText(this,"Setting Clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.ass_center:
+                Toast.makeText(this,"Assistance Center Clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.mode_dark:
+                Toast.makeText(this,"Dark Mode Active", Toast.LENGTH_SHORT).show();
+                break;
         }
+        drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 
