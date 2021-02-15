@@ -4,12 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.solver.state.Reference;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -87,13 +85,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         new ShareFragment()).commit();
                 break;
             case R.id.setting:
-                Toast.makeText(this,"Setting Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Setting Clicked", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.ass_center:
-                Toast.makeText(this,"Assistance Center Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Assistance Center Clicked", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.mode_dark:
-                Toast.makeText(this,"Dark Mode Active", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Dark Mode Active", Toast.LENGTH_SHORT).show();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
