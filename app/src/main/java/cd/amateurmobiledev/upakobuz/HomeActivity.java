@@ -33,7 +33,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        toolbar.setTitleTextColor(getResources().getColor(R.color.things));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorPrimary));
 
         drawerLayout = findViewById(R.id.drawer_layout);
 
@@ -44,7 +44,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
-        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.things));
+        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorPrimary));
 
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
