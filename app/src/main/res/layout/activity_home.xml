@@ -36,9 +36,19 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/drawer_menu" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:itemIconSize="30dp"
+            android:background="@color/things"
+            app:menu="@menu/bottom_nav"/>
+
+    </RelativeLayout>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
