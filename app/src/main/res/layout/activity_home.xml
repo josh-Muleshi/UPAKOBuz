@@ -34,6 +34,7 @@
         </LinearLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/things"
@@ -41,8 +42,6 @@
             app:itemIconSize="30dp"
             app:menu="@menu/bottom_nav" />
     </RelativeLayout>
-
-
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

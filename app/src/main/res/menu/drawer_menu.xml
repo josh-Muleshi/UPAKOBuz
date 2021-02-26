@@ -7,32 +7,32 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_baseline_home_24"
-            android:title="Home" />
+            android:title="@string/home" />
 
         <item
             android:id="@+id/nav_favorite"
             android:icon="@drawable/ic_baseline_favorite_border_24"
-            android:title="Favorite" />
+            android:title="@string/favorite" />
 
         <item
             android:id="@+id/nav_massage"
             android:icon="@drawable/ic_baseline_mail_outline_24"
-            android:title="Message" />
+            android:title="@string/message" />
 
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_person"
-            android:title="Profile" />
+            android:title="@string/profile" />
 
         <item
             android:id="@+id/nav_notification"
             android:icon="@drawable/ic_baseline_notifications_none_24"
-            android:title="Notification" />
+            android:title="@string/notification" />
 
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/ic_baseline_share_24"
-            android:title="Share" />
+            android:title="@string/share" />
     </group>
 
     <item android:title="Parameters">

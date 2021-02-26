@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 import cd.amateurmobiledev.upakobuz.fragment.FavoriteFragment;
@@ -21,7 +23,7 @@ import cd.amateurmobiledev.upakobuz.fragment.NotificationFragment;
 import cd.amateurmobiledev.upakobuz.fragment.ProfileFragment;
 import cd.amateurmobiledev.upakobuz.fragment.ShareFragment;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
 
@@ -39,6 +41,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
@@ -59,30 +64,34 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
+        // we can do that as this to
+        Fragment selectFragment = null;
+
         switch (menuItem.getItemId()) {
             case R.id.nav_home:
+
+                /*
+                in stead of doing this
+
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HomeFragment()).commit();
+                        new HomeFragment()).commit();*/
+
+                selectFragment = new HomeFragment();
                 break;
             case R.id.nav_favorite:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new FavoriteFragment()).commit();
+                selectFragment = new FavoriteFragment();
                 break;
             case R.id.nav_massage:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new MessageFragment()).commit();
+                selectFragment = new MessageFragment();
                 break;
             case R.id.nav_profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ProfileFragment()).commit();
+                selectFragment = new ProfileFragment();
                 break;
             case R.id.nav_notification:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new NotificationFragment()).commit();
+                selectFragment = new NotificationFragment();
                 break;
             case R.id.nav_share:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ShareFragment()).commit();
+                selectFragment = new ShareFragment();
                 break;
             case R.id.setting:
                 Toast.makeText(getApplicationContext(),"Setting Clicked", Toast.LENGTH_SHORT).show();
@@ -94,6 +103,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(getApplicationContext(),"Dark Mode Active", Toast.LENGTH_SHORT).show();
                 break;
         }
+        assert selectFragment != null;
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                selectFragment).commit();
+
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
