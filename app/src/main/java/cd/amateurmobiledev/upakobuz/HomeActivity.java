@@ -117,8 +117,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.notification) {
-            Toast.makeText(this, "notification clicked", Toast.LENGTH_SHORT).show();
+        if (id == R.id.search) {
+            Toast.makeText(this, "Search clicked", Toast.LENGTH_SHORT).show();
             return true;
         }
         return super.onOptionsItemSelected(item);

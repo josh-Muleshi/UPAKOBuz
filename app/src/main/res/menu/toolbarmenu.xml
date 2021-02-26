@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:Context=".HomeActivity">
     <item
-        android:id="@+id/notification"
-        android:title="Notification"
+        android:id="@+id/search"
+        android:title="Search"
         app:showAsAction="always"
         android:orderInCategory="100"
-        android:icon="@drawable/ic_notifications"/>
+        android:icon="@drawable/ic_search_24"/>
 </menu>
