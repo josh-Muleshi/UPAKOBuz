@@ -8,5 +8,5 @@
         android:title="Search"
         app:showAsAction="always"
         android:orderInCategory="100"
-        android:icon="@drawable/ic_search_24"/>
+        android:icon="@drawable/ic_baseline_search_24"/>
 </menu>
