@@ -21,6 +21,7 @@ import cd.amateurmobiledev.upakobuz.fragment.HomeFragment;
 import cd.amateurmobiledev.upakobuz.fragment.MessageFragment;
 import cd.amateurmobiledev.upakobuz.fragment.NotificationFragment;
 import cd.amateurmobiledev.upakobuz.fragment.ProfileFragment;
+import cd.amateurmobiledev.upakobuz.fragment.SearchFragment;
 import cd.amateurmobiledev.upakobuz.fragment.ShareFragment;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
@@ -77,6 +78,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         new HomeFragment()).commit();*/
 
                 selectFragment = new HomeFragment();
+                break;
+            case R.id.nav_search:
+                selectFragment = new SearchFragment();
                 break;
             case R.id.nav_favorite:
                 selectFragment = new FavoriteFragment();
