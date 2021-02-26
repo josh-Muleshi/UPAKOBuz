@@ -9,7 +9,7 @@
     tools:context=".HomeActivity"
     tools:openDrawer="start">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:background="@color/things"
+            android:layout_alignParentTop="true"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
         <FrameLayout
@@ -30,9 +31,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/things"
+            android:layout_alignParentBottom="true"
             app:itemIconSize="30dp"
             app:menu="@menu/bottom_nav" />
-    </LinearLayout>
+    </RelativeLayout>
 
 
 
