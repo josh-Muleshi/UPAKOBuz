@@ -37,9 +37,10 @@
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:itemTextColor="@color/colorAccent"
+            app:itemIconTint="@color/colorAccent"
             android:background="@color/things"
             android:layout_alignParentBottom="true"
-            app:itemIconSize="30dp"
             app:menu="@menu/bottom_nav" />
     </RelativeLayout>
 
