@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/things"
-    app:itemIconTint="@color/colorAccent"
-    app:itemTextColor="@color/colorAccent"
+    app:itemIconTint="@color/item_nav_color"
+    app:itemTextColor="@color/item_nav_color"
     app:menu="@menu/bottom_nav" />
