@@ -66,51 +66,57 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
         // we can do that as this to
-        Fragment selectFragment = null;
+        // Fragment selectFragment = null;
 
         switch (menuItem.getItemId()) {
             case R.id.nav_home:
-
-                /*
-                in stead of doing this
-
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HomeFragment()).commit();*/
+                        new HomeFragment()).commit();
 
-                selectFragment = new HomeFragment();
+                // selectFragment = new HomeFragment();
                 break;
             case R.id.nav_search:
-                selectFragment = new SearchFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new SearchFragment()).commit();
                 break;
             case R.id.nav_favorite:
-                selectFragment = new FavoriteFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new FavoriteFragment()).commit();
                 break;
             case R.id.nav_massage:
-                selectFragment = new MessageFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new MessageFragment()).commit();
                 break;
             case R.id.nav_profile:
-                selectFragment = new ProfileFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ProfileFragment()).commit();
                 break;
             case R.id.nav_notification:
-                selectFragment = new NotificationFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new NotificationFragment()).commit();
                 break;
             case R.id.nav_share:
-                selectFragment = new ShareFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ShareFragment()).commit();
                 break;
             case R.id.setting:
-                Toast.makeText(getApplicationContext(),"Setting Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Setting Clicked", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.ass_center:
-                Toast.makeText(getApplicationContext(),"Assistance Center Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Assistance Center Clicked", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.mode_dark:
-                Toast.makeText(getApplicationContext(),"Dark Mode Active", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Dark Mode Active", Toast.LENGTH_SHORT).show();
                 break;
         }
+
+        /*
         assert selectFragment != null;
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 selectFragment).commit();
 
+
+         */
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
