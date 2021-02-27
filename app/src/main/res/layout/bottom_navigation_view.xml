@@ -7,4 +7,5 @@
     android:background="@color/things"
     app:itemIconTint="@color/item_nav_color"
     app:itemTextColor="@color/item_nav_color"
+    app:labelVisibilityMode="unlabeled"
     app:menu="@menu/bottom_nav" />
